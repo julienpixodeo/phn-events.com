@@ -1,0 +1,525 @@
+<?php
+namespace GrandConferenceElementor\Widgets;
+
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Scheme_Color;
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+/**
+ * Elementor Blog Posts
+ *
+ * Elementor widget for blog posts
+ *
+ * @since 1.0.0
+ */
+class GrandConference_Event_Carousel extends Widget_Base {
+
+	/**
+	 * Retrieve the widget name.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access public
+	 *
+	 * @return string Widget name.
+	 */
+	public function get_name() {
+		return 'grandconference-event-carousel';
+	}
+
+	/**
+	 * Retrieve the widget title.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access public
+	 *
+	 * @return string Widget title.
+	 */
+	public function get_title() {
+		return __( 'Event Carousel', 'grandconference-elementor' );
+	}
+
+	/**
+	 * Retrieve the widget icon.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access public
+	 *
+	 * @return string Widget icon.
+	 */
+	public function get_icon() {
+		return 'eicon-slider-3d';
+	}
+
+	/**
+	 * Retrieve the list of categories the widget belongs to.
+	 *
+	 * Used to determine where to display the widget in the editor.
+	 *
+	 * Note that currently Elementor supports only one category.
+	 * When multiple categories passed, Elementor uses the first one.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access public
+	 *
+	 * @return array Widget categories.
+	 */
+	public function get_categories() {
+		return [ 'grandconference-theme-widgets-category' ];
+	}
+
+	/**
+	 * Retrieve the list of scripts the widget depended on.
+	 *
+	 * Used to set scripts dependencies required to run the widget.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access public
+	 *
+	 * @return array Widget scripts dependencies.
+	 */
+	public function get_script_depends() {
+		return [ 'owl-carousel', 'grandconference-elementor' ];
+	}
+	
+	/**
+	 * Retrieve blog post categories
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access public
+	 *
+	 * @return array Blog categories
+	 */
+	public function get_blog_categories() {
+		//Get all categories
+		$categories_arr = get_categories( array(
+			'orderby' => 'name',
+			'order'   => 'ASC'
+		) );
+		$tg_categories_select = array();
+		
+		foreach ($categories_arr as $cat) {
+			$tg_categories_select[$cat->term_id] = $cat->name;
+		}
+
+		return $tg_categories_select;
+	}
+
+	/**
+	 * Register the widget controls.
+	 *
+	 * Adds different input fields to allow the user to change and customize the widget settings.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access protected
+	 */
+	protected function register_controls() {
+		$this->start_controls_section(
+			'section_content',
+			[
+				'label' => __( 'Content', 'grandconference-elementor' ),
+			]
+		);
+		
+		$this->add_control(
+			'cat',
+			[
+				'label' => __( 'Filter by category', 'grandconference-elementor' ),
+				'type' => Controls_Manager::SELECT2,
+				'options' => grandconference_get_event_cat(),
+				'multiple' => false,
+			]
+		);
+		
+		$this->add_control(
+			'order',
+			[
+				'label' => __( 'Order By', 'grandconference-elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'options' => array(
+					'default' 	=> __( 'Default', 'grandconference-elementor' ),
+					'newest'	=> __( 'Newest', 'grandconference-elementor' ),
+					'oldest'	=> __( 'Oldest', 'grandconference-elementor' ),
+					'title'		=> __( 'Title', 'grandconference-elementor' ),
+					'random'	=> __( 'Random', 'grandconference-elementor' ),
+				),
+				'default' => 'default',
+				'multiple' => false,
+			]
+		);
+		
+		$this->add_control(
+			'posts_per_page',
+			[
+				'label' => __( 'All Items', 'grandconference-elementor' ),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 6,
+				],
+				'range' => [
+					'px' => [
+						'min' => -1,
+						'max' => 100,
+						'step' => 1,
+					]
+				],
+			]
+		);
+		
+		$this->add_control(
+			'image_dimension',
+			[
+				'label'       => esc_html__( 'Image Dimension', 'grandconference-elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'grandconference-album-grid',
+				'options' => [
+					 'grandconference-gallery-grid' => __( 'Landscape', 'grandconference-elementor' ),
+					 'grandconference-gallery-list' => __( 'Square', 'grandconference-elementor' ),
+					 'grandconference-album-grid' => __( 'Portrait', 'grandconference-elementor' ),
+					 'large' => __( 'Original Dimension', 'grandconference-elementor' ),
+				]
+			]
+		);
+		
+		$this->end_controls_section();
+		
+		$this->start_controls_section(
+			'section_content_options',
+			[
+				'label' => __( 'Options', 'grandconference-elementor' ),
+			]
+		);
+		
+		$this->add_control(
+			'ini_item',
+			[
+				'label' => __( 'Initials Items', 'grandconference-elementor' ),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 4,
+				],
+				'range' => [
+					'px' => [
+						'min' => 2,
+						'max' => 5,
+						'step' => 1,
+					]
+				],
+				'size_units' => [ 'px' ]
+			]
+		);
+		
+		$this->add_control(
+			'autoplay',
+			[
+				'label' => __( 'Auto Play', 'grandconference-elementor' ),
+				'type' => Controls_Manager::SWITCHER,
+				'default' => 'yes',
+				'label_on' => __( 'Yes', 'grandconference-elementor' ),
+				'label_off' => __( 'No', 'grandconference-elementor' ),
+				'return_value' => 'yes',
+			]
+		);
+
+		$this->add_control(
+		    'timer',
+		    [
+		        'label' => __( 'Timer (in seconds)', 'grandconference-elementor' ),
+		        'type' => Controls_Manager::SLIDER,
+		        'default' => [
+		            'size' => 8,
+		        ],
+		        'range' => [
+		            'px' => [
+		                'min' => 1,
+		                'max' => 60,
+		                'step' => 1,
+		            ]
+		        ],
+		        'size_units' => [ 'px' ]
+		    ]
+		);
+		
+		$this->add_control(
+			'pagination',
+			[
+				'label' => __( 'Show Pagination', 'grandconference-elementor' ),
+				'type' => Controls_Manager::SWITCHER,
+				'default' => 'yes',
+				'label_on' => __( 'Yes', 'grandconference-elementor' ),
+				'label_off' => __( 'No', 'grandconference-elementor' ),
+				'return_value' => 'yes',
+			]
+		);
+		
+		$this->add_control(
+			'stage_padding',
+			[
+				'label' => __( 'Stage Padding', 'grandconference-elementor' ),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 70,
+				],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 200,
+						'step' => 5,
+					]
+				],
+				'size_units' => [ 'px' ]
+			]
+		);
+		
+		$this->add_control(
+			'item_margin',
+			[
+				'label' => __( 'Item Margin', 'grandconference-elementor' ),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 40,
+				],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 200,
+						'step' => 5,
+					]
+				],
+				'size_units' => [ 'px' ]
+			]
+		);
+		
+		$this->add_responsive_control(
+			'image_border_radius',
+			[
+				'label' => __( 'Image Border Radius', 'grandconference-elementor' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px' ],
+				'selectors' => [
+					'{{WRAPPER}} .owl-carousel .owl-item img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		
+		$this->end_controls_section();
+		
+		$this->start_controls_section(
+			'section_title_style',
+			array(
+				'label'      => esc_html__( 'Title', 'grandconference-elementor' ),
+				'tab'        => Controls_Manager::TAB_STYLE,
+				'show_label' => false,
+			)
+		);
+		
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'title_typography',
+				'label' => __( 'Title Typography', 'grandconference-elementor' ),
+				'selector' => '{{WRAPPER}} .event-carousel-wrapper .post-header h5',
+			]
+		);
+		
+		$this->add_control(
+		    'title_color',
+		    [
+		        'label' => __( 'Title Color', 'grandconference-elementor' ),
+		        'type' => Controls_Manager::COLOR,
+		        'default' => '#111111',
+		        'selectors' => [
+		            '{{WRAPPER}} .event-carousel-wrapper .post-header h5 a' => 'color: {{VALUE}}',
+		        ],
+		    ]
+		);
+		
+		$this->end_controls_section();
+		
+		$this->start_controls_section(
+			'section_description_style',
+			array(
+				'label'      => esc_html__( 'Description', 'grandconference-elementor' ),
+				'tab'        => Controls_Manager::TAB_STYLE,
+				'show_label' => false,
+			)
+		);
+		
+		$this->add_control(
+			'description_color',
+			[
+				'label' => __( 'Color', 'grandconference-elementor' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#222222',
+				'selectors' => [
+					'{{WRAPPER}} .event-carousel-wrapper .portfolio-classic-description' => 'color: {{VALUE}}',
+				],
+			]
+		);
+		
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'description_typography',
+				'label' => __( 'Typography', 'grandconference-elementor' ),
+				'selector' => '{{WRAPPER}} .event-carousel-wrapper .portfolio-classic-description',
+			]
+		);
+		
+		$this->add_control(
+			'excerpt_length',
+			[
+				'label' => __( 'Excerpt Length', 'grandconference-elementor' ),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 100,
+				],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 300,
+						'step' => 1,
+					]
+				],
+			]
+		);
+		
+		$this->end_controls_section();
+		
+		$this->start_controls_section(
+			'section_meta_style',
+			array(
+				'label'      => esc_html__( 'Meta', 'grandconference-elementor' ),
+				'tab'        => Controls_Manager::TAB_STYLE,
+				'show_label' => false,
+			)
+		);
+		
+		$this->add_control(
+			'meta_data_color',
+			[
+				'label' => __( 'Meta Data Color', 'grandconference-elementor' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#222222',
+				'selectors' => [
+					'{{WRAPPER}} .portfolio-classic-meta-data' => 'color: {{VALUE}}',
+				],
+			]
+		);
+		
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'meta_data_typography',
+				'label' => __( 'Typography', 'grandconference-elementor' ),
+				'selector' => '{{WRAPPER}} .portfolio-classic-meta-data',
+			]
+		);
+		
+		$this->add_control(
+			'meta_icon_color',
+			[
+				'label' => __( 'Meta Icon Color', 'grandconference-elementor' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#222222',
+				'selectors' => [
+					'{{WRAPPER}} span:not(.portfolio-classic-meta-data)' => 'color: {{VALUE}}',
+				],
+			]
+		);
+		
+		$this->add_control(
+			'meta_icon_size',
+			[
+				'label' => __( 'Meta Icon Size', 'grandconference-elementor' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 50,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 16,
+				],
+				'selectors' => [
+					'{{WRAPPER}} span:not(.portfolio-classic-meta-data)' => 'font-size: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+		
+		$this->end_controls_section();
+		
+		$this->start_controls_section(
+			'section_pagination_style',
+			array(
+				'label'      => esc_html__( 'Pagination', 'grandconference-elementor' ),
+				'tab'        => Controls_Manager::TAB_STYLE,
+				'show_label' => false,
+			)
+		);
+		
+		$this->add_control(
+		    'pagination_color',
+		    [
+		        'label' => __( 'Pagination Color', 'grandconference-elementor' ),
+		        'type' => Controls_Manager::COLOR,
+		        'default' => '#cccccc',
+		        'selectors' => [
+		            '{{WRAPPER}} .event-carousel-wrapper .owl-carousel .owl-dots .owl-dot span' => 'background: {{VALUE}}',
+		        ],
+		    ]
+		);
+		
+		$this->add_control(
+		    'pagination_active_color',
+		    [
+		        'label' => __( 'Pagination Active Color', 'grandconference-elementor' ),
+		        'type' => Controls_Manager::COLOR,
+		        'default' => '#000000',
+		        'selectors' => [
+		            '{{WRAPPER}} .event-carousel-wrapper .owl-carousel .owl-dots .owl-dot.active span' => 'background: {{VALUE}}',
+		        ],
+		    ]
+		);
+		
+		$this->end_controls_section();
+	}
+
+	/**
+	 * Render the widget output on the frontend.
+	 *
+	 * Written in PHP and used to generate the final HTML.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access protected
+	 */
+	protected function render() {
+		include(GRANDCONFERENCE_ELEMENTOR_PATH.'templates/event-carousel/index.php');
+	}
+
+	/**
+	 * Render the widget output in the editor.
+	 *
+	 * Written as a Backbone JavaScript template and used to generate the live preview.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @access protected
+	 */
+	protected function content_template() {
+		return '';
+	}
+}

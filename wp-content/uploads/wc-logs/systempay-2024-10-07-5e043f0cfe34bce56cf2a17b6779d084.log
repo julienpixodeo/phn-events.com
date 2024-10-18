@@ -1,0 +1,235 @@
+2024-10-07T09:56:55+00:00 NOTICE Generating payment form for order #31363. CONTEXT: {"_legacy":true}
+2024-10-07T09:56:55+00:00 NOTICE Data to be sent to payment gateway : Array
+(
+    [signature] => RqFm7TWFTKXxddWtdvPlvW0/nX3fNJzzheFa68DDOZQ=
+    [vads_action_mode] => INTERACTIVE
+    [vads_amount] => 32800
+    [vads_capture_delay] => 
+    [vads_contrib] => WooCommerce_2.x-8.x_1.13.1/6.6.2_8.7.0/8.1.29
+    [vads_ctx_mode] => PRODUCTION
+    [vads_currency] => 978
+    [vads_cust_address] => 2 Rue Moulin de Joué BP 80127
+    [vads_cust_city] => RENNES CEDEX 7
+    [vads_cust_country] => FR
+    [vads_cust_email] => annie.fantina@sdis35.fr
+    [vads_cust_first_name] => Alain
+    [vads_cust_id] => 0
+    [vads_cust_last_name] => COLOT
+    [vads_cust_phone] => 0299875826
+    [vads_cust_state] => 
+    [vads_cust_status] => 
+    [vads_cust_zip] => 35701
+    [vads_cust_national_id] => 
+    [vads_cust_address_number] => 
+    [vads_cust_district] => RENNES CEDEX 7
+    [vads_language] => en
+    [vads_order_id] => 31363
+    [vads_page_action] => PAYMENT
+    [vads_payment_cards] => 
+    [vads_payment_config] => SINGLE
+    [vads_redirect_error_message] => Redirection to shop in a few seconds...
+    [vads_redirect_error_timeout] => 5
+    [vads_redirect_success_message] => Redirection to shop in a few seconds...
+    [vads_redirect_success_timeout] => 5
+    [vads_return_mode] => POST
+    [vads_ship_to_city] => RENNES CEDEX 7
+    [vads_ship_to_country] => FR
+    [vads_ship_to_first_name] => Alain
+    [vads_ship_to_last_name] => COLOT
+    [vads_ship_to_state] => 
+    [vads_ship_to_street] => 2 Rue Moulin de Joué
+    [vads_ship_to_street2] => BP 80127
+    [vads_ship_to_zip] => 35701
+    [vads_shipping_amount] => 0
+    [vads_site_id] => 98191832
+    [vads_totalamount_vat] => 2982
+    [vads_trans_date] => 20241007095655
+    [vads_trans_id] => 358150
+    [vads_url_return] => https://phn-events.com/?wc-api=WC_Gateway_Systempay
+    [vads_validation_mode] => 
+    [vads_version] => V2
+    [vads_ext_info_order_key] => wc_order_OXCpbASEo4PKM
+    [vads_ext_info_blog_id] => 0
+    [vads_ext_info_session_id] => 
+)
+ CONTEXT: {"_legacy":true}
+2024-10-07T10:02:52+00:00 NOTICE Payment failed or cancelled for order #31363. Action rejected (05).  Payment guarantee not applicable. CONTEXT: {"_legacy":true}
+2024-10-07T10:02:52+00:00 NOTICE Order #31363 status updated successfully on failure. CONTEXT: {"_legacy":true}
+2024-10-07T10:02:52+00:00 NOTICE IPN URL PROCESS END CONTEXT: {"_legacy":true}
+2024-10-07T10:02:59+00:00 NOTICE Order #31363 is already saved. CONTEXT: {"_legacy":true}
+2024-10-07T10:02:59+00:00 NOTICE Payment failed confirmed for order #31363. CONTEXT: {"_legacy":true}
+2024-10-07T10:02:59+00:00 NOTICE RETURN URL PROCESS END CONTEXT: {"_legacy":true}
+2024-10-07T10:03:25+00:00 NOTICE Generating payment form for order #31364. CONTEXT: {"_legacy":true}
+2024-10-07T10:03:25+00:00 NOTICE Data to be sent to payment gateway : Array
+(
+    [signature] => L2Mb6HMYQ4N1Rpdgt9bFvZ38EUhyMRgCJQ9zv0QFwgc=
+    [vads_action_mode] => INTERACTIVE
+    [vads_amount] => 16400
+    [vads_capture_delay] => 
+    [vads_contrib] => WooCommerce_2.x-8.x_1.13.1/6.6.2_8.7.0/8.1.29
+    [vads_ctx_mode] => PRODUCTION
+    [vads_currency] => 978
+    [vads_cust_address] => 2 Rue Moulin de Joué BP 80127
+    [vads_cust_city] => RENNES CEDEX 7
+    [vads_cust_country] => FR
+    [vads_cust_email] => annie.fantina@sdis35.fr
+    [vads_cust_first_name] => Alain
+    [vads_cust_id] => 0
+    [vads_cust_last_name] => COLOT
+    [vads_cust_phone] => 0299875826
+    [vads_cust_state] => 
+    [vads_cust_status] => 
+    [vads_cust_zip] => 35701
+    [vads_cust_national_id] => 
+    [vads_cust_address_number] => 
+    [vads_cust_district] => RENNES CEDEX 7
+    [vads_language] => fr
+    [vads_order_id] => 31364
+    [vads_page_action] => PAYMENT
+    [vads_payment_cards] => 
+    [vads_payment_config] => SINGLE
+    [vads_redirect_error_message] => Redirection vers la boutique dans quelques instants...
+    [vads_redirect_error_timeout] => 5
+    [vads_redirect_success_message] => Redirection vers la boutique dans quelques instants...
+    [vads_redirect_success_timeout] => 5
+    [vads_return_mode] => POST
+    [vads_ship_to_city] => RENNES CEDEX 7
+    [vads_ship_to_country] => FR
+    [vads_ship_to_first_name] => Alain
+    [vads_ship_to_last_name] => COLOT
+    [vads_ship_to_state] => 
+    [vads_ship_to_street] => 2 Rue Moulin de Joué
+    [vads_ship_to_street2] => BP 80127
+    [vads_ship_to_zip] => 35701
+    [vads_shipping_amount] => 0
+    [vads_site_id] => 98191832
+    [vads_totalamount_vat] => 1491
+    [vads_trans_date] => 20241007100325
+    [vads_trans_id] => 362058
+    [vads_url_return] => https://phn-events.com/?wc-api=WC_Gateway_Systempay
+    [vads_validation_mode] => 
+    [vads_version] => V2
+    [vads_ext_info_order_key] => wc_order_5Ay7B150cVbQa
+    [vads_ext_info_blog_id] => 0
+    [vads_ext_info_session_id] => 
+)
+ CONTEXT: {"_legacy":true}
+2024-10-07T10:04:18+00:00 NOTICE Generating payment form for order #31364. CONTEXT: {"_legacy":true}
+2024-10-07T10:04:18+00:00 NOTICE Data to be sent to payment gateway : Array
+(
+    [signature] => VSAjPmFsGjFpZ5hvAUum/fpbVr2nY2vP5toP1oOVsNg=
+    [vads_action_mode] => INTERACTIVE
+    [vads_amount] => 16400
+    [vads_capture_delay] => 
+    [vads_contrib] => WooCommerce_2.x-8.x_1.13.1/6.6.2_8.7.0/8.1.29
+    [vads_ctx_mode] => PRODUCTION
+    [vads_currency] => 978
+    [vads_cust_address] => 2 Rue Moulin de Joué BP 80127
+    [vads_cust_city] => RENNES CEDEX 7
+    [vads_cust_country] => FR
+    [vads_cust_email] => annie.fantina@sdis35.fr
+    [vads_cust_first_name] => Alain
+    [vads_cust_id] => 0
+    [vads_cust_last_name] => COLOT
+    [vads_cust_phone] => 0299875826
+    [vads_cust_state] => 
+    [vads_cust_status] => 
+    [vads_cust_zip] => 35701
+    [vads_cust_national_id] => 
+    [vads_cust_address_number] => 
+    [vads_cust_district] => RENNES CEDEX 7
+    [vads_language] => fr
+    [vads_order_id] => 31364
+    [vads_page_action] => PAYMENT
+    [vads_payment_cards] => 
+    [vads_payment_config] => SINGLE
+    [vads_redirect_error_message] => Redirection vers la boutique dans quelques instants...
+    [vads_redirect_error_timeout] => 5
+    [vads_redirect_success_message] => Redirection vers la boutique dans quelques instants...
+    [vads_redirect_success_timeout] => 5
+    [vads_return_mode] => POST
+    [vads_ship_to_city] => RENNES CEDEX 7
+    [vads_ship_to_country] => FR
+    [vads_ship_to_first_name] => Alain
+    [vads_ship_to_last_name] => COLOT
+    [vads_ship_to_state] => 
+    [vads_ship_to_street] => 2 Rue Moulin de Joué
+    [vads_ship_to_street2] => BP 80127
+    [vads_ship_to_zip] => 35701
+    [vads_shipping_amount] => 0
+    [vads_site_id] => 98191832
+    [vads_totalamount_vat] => 1491
+    [vads_trans_date] => 20241007100418
+    [vads_trans_id] => 362585
+    [vads_url_return] => https://phn-events.com/?wc-api=WC_Gateway_Systempay
+    [vads_validation_mode] => 
+    [vads_version] => V2
+    [vads_ext_info_order_key] => wc_order_5Ay7B150cVbQa
+    [vads_ext_info_blog_id] => 0
+    [vads_ext_info_session_id] => 
+)
+ CONTEXT: {"_legacy":true}
+2024-10-07T10:04:27+00:00 NOTICE Payment failed or cancelled for order #31364. Action canceled (17).  Payment guarantee not applicable. CONTEXT: {"_legacy":true}
+2024-10-07T10:04:27+00:00 NOTICE Order #31364 status updated successfully on failure. CONTEXT: {"_legacy":true}
+2024-10-07T10:04:27+00:00 NOTICE RETURN URL PROCESS END CONTEXT: {"_legacy":true}
+2024-10-07T12:15:37+00:00 NOTICE Generating payment form for order #31365. CONTEXT: {"_legacy":true}
+2024-10-07T12:15:37+00:00 NOTICE Data to be sent to payment gateway : Array
+(
+    [signature] => w3az+E6YLqqptSGHwHrFEEGheZ+LoJ+g3GbFbDTb1NA=
+    [vads_action_mode] => INTERACTIVE
+    [vads_amount] => 32800
+    [vads_capture_delay] => 
+    [vads_contrib] => WooCommerce_2.x-8.x_1.13.1/6.6.2_8.7.0/8.1.29
+    [vads_ctx_mode] => PRODUCTION
+    [vads_currency] => 978
+    [vads_cust_address] => 2 Rue Moulin de Joué BP 80127
+    [vads_cust_city] => RENNES CEDEX 7
+    [vads_cust_country] => FR
+    [vads_cust_email] => annie.fantina@sdis35.fr
+    [vads_cust_first_name] => Alain
+    [vads_cust_id] => 0
+    [vads_cust_last_name] => COLOT
+    [vads_cust_phone] => 0299875826
+    [vads_cust_state] => 
+    [vads_cust_status] => 
+    [vads_cust_zip] => 35701
+    [vads_cust_national_id] => 
+    [vads_cust_address_number] => 
+    [vads_cust_district] => RENNES CEDEX 7
+    [vads_language] => en
+    [vads_order_id] => 31365
+    [vads_page_action] => PAYMENT
+    [vads_payment_cards] => 
+    [vads_payment_config] => SINGLE
+    [vads_redirect_error_message] => Redirection to shop in a few seconds...
+    [vads_redirect_error_timeout] => 5
+    [vads_redirect_success_message] => Redirection to shop in a few seconds...
+    [vads_redirect_success_timeout] => 5
+    [vads_return_mode] => POST
+    [vads_ship_to_city] => RENNES CEDEX 7
+    [vads_ship_to_country] => FR
+    [vads_ship_to_first_name] => Alain
+    [vads_ship_to_last_name] => COLOT
+    [vads_ship_to_state] => 
+    [vads_ship_to_street] => 2 Rue Moulin de Joué
+    [vads_ship_to_street2] => BP 80127
+    [vads_ship_to_zip] => 35701
+    [vads_shipping_amount] => 0
+    [vads_site_id] => 98191832
+    [vads_totalamount_vat] => 2982
+    [vads_trans_date] => 20241007121536
+    [vads_trans_id] => 441369
+    [vads_url_return] => https://phn-events.com/?wc-api=WC_Gateway_Systempay
+    [vads_validation_mode] => 
+    [vads_version] => V2
+    [vads_ext_info_order_key] => wc_order_UDLC0OUFptehS
+    [vads_ext_info_blog_id] => 0
+    [vads_ext_info_session_id] => 
+)
+ CONTEXT: {"_legacy":true}
+2024-10-07T12:32:52+00:00 NOTICE Payment successfull, let's complete order #31365. CONTEXT: {"_legacy":true}
+2024-10-07T12:32:53+00:00 NOTICE Payment processed successfully by IPN URL call for order #31365. CONTEXT: {"_legacy":true}
+2024-10-07T12:32:53+00:00 NOTICE IPN URL PROCESS END CONTEXT: {"_legacy":true}
+2024-10-07T12:32:59+00:00 NOTICE Order #31365 is already saved. CONTEXT: {"_legacy":true}
+2024-10-07T12:32:59+00:00 NOTICE Payment successful confirmed for order #31365. CONTEXT: {"_legacy":true}
+2024-10-07T12:32:59+00:00 NOTICE RETURN URL PROCESS END CONTEXT: {"_legacy":true}

@@ -1,0 +1,61 @@
+2024-10-05T11:24:26+00:00 NOTICE Generating payment form for order #31362. CONTEXT: {"_legacy":true}
+2024-10-05T11:24:26+00:00 NOTICE Data to be sent to payment gateway : Array
+(
+    [signature] => IDmHPLsIGDD47Rz9FAexO1CIk0DrXlTMMunSWLRFjVc=
+    [vads_action_mode] => INTERACTIVE
+    [vads_amount] => 15800
+    [vads_capture_delay] => 
+    [vads_contrib] => WooCommerce_2.x-8.x_1.13.1/6.6.2_8.7.0/8.1.29
+    [vads_ctx_mode] => PRODUCTION
+    [vads_currency] => 978
+    [vads_cust_address] => 45 place de Decs
+    [vads_cust_city] => Cormeilles
+    [vads_cust_country] => FR
+    [vads_cust_email] => combes.nini@orange.fr
+    [vads_cust_first_name] => Combes
+    [vads_cust_id] => 0
+    [vads_cust_last_name] => Virginie
+    [vads_cust_phone] => 0608894311
+    [vads_cust_state] => 
+    [vads_cust_status] => 
+    [vads_cust_zip] => 27260
+    [vads_cust_national_id] => 
+    [vads_cust_address_number] => 
+    [vads_cust_district] => Cormeilles
+    [vads_language] => en
+    [vads_order_id] => 31362
+    [vads_page_action] => PAYMENT
+    [vads_payment_cards] => 
+    [vads_payment_config] => SINGLE
+    [vads_redirect_error_message] => Redirection to shop in a few seconds...
+    [vads_redirect_error_timeout] => 5
+    [vads_redirect_success_message] => Redirection to shop in a few seconds...
+    [vads_redirect_success_timeout] => 5
+    [vads_return_mode] => POST
+    [vads_ship_to_city] => Cormeilles
+    [vads_ship_to_country] => FR
+    [vads_ship_to_first_name] => Combes
+    [vads_ship_to_last_name] => Virginie
+    [vads_ship_to_state] => 
+    [vads_ship_to_street] => 45 place de Decs
+    [vads_ship_to_street2] => 
+    [vads_ship_to_zip] => 27260
+    [vads_shipping_amount] => 0
+    [vads_site_id] => 98191832
+    [vads_totalamount_vat] => 1436
+    [vads_trans_date] => 20241005112426
+    [vads_trans_id] => 410660
+    [vads_url_return] => https://phn-events.com/?wc-api=WC_Gateway_Systempay
+    [vads_validation_mode] => 
+    [vads_version] => V2
+    [vads_ext_info_order_key] => wc_order_BM000UhdPNUK5
+    [vads_ext_info_blog_id] => 0
+    [vads_ext_info_session_id] => 
+)
+ CONTEXT: {"_legacy":true}
+2024-10-05T11:27:34+00:00 NOTICE Payment successfull, let's complete order #31362. CONTEXT: {"_legacy":true}
+2024-10-05T11:27:34+00:00 NOTICE Payment processed successfully by IPN URL call for order #31362. CONTEXT: {"_legacy":true}
+2024-10-05T11:27:34+00:00 NOTICE IPN URL PROCESS END CONTEXT: {"_legacy":true}
+2024-10-05T11:27:41+00:00 NOTICE Order #31362 is already saved. CONTEXT: {"_legacy":true}
+2024-10-05T11:27:41+00:00 NOTICE Payment successful confirmed for order #31362. CONTEXT: {"_legacy":true}
+2024-10-05T11:27:41+00:00 NOTICE RETURN URL PROCESS END CONTEXT: {"_legacy":true}

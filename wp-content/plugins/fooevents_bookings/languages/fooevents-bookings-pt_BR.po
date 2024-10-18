@@ -1,0 +1,423 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FooEvents Bookings\n"
+"POT-Creation-Date: 2024-01-19 12:11-0800\n"
+"PO-Revision-Date: 2024-01-19 12:11-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;esc_attr__;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: class-fooevents-bookings.php:130
+msgid "The FooEvents Bookings plugin requires FooEvents for WooCommerce to be installed."
+msgstr "O plugin de Reservas do FooEvents requer que o FooEvents para WooCommerce esteja instalado."
+
+#: class-fooevents-bookings.php:136
+#, php-format
+msgid "Only tickets that were generated after the <strong>FooEvents Bookings plugin</strong> was updated to <strong>version 1.4.0</strong> can be viewed when filtering down to a date level. In order to filter by date and view tickets that were generated before version 1.4.0, please %1$sfollow these steps%2$s."
+msgstr "Apenas os ingressos gerados após a atualização do plugin de reservas do FooEvents para a versão 1.4.0 podem ser visualizados ao filtrar por data. Para filtrar por data e visualizar os ingressos gerados antes da versão 1.4.0, por favor %1$s siga estes passos %2$s."
+
+#: class-fooevents-bookings.php:161 class-fooevents-bookings.php:226
+msgid "Done"
+msgstr "Feito"
+
+#: class-fooevents-bookings.php:162 class-fooevents-bookings.php:227
+msgid "Today"
+msgstr "Hoje"
+
+#: class-fooevents-bookings.php:163 class-fooevents-bookings.php:228
+#: templates/booking-options.php:68
+msgid "Time"
+msgstr "Tempo"
+
+#: class-fooevents-bookings.php:164 class-fooevents-bookings.php:229
+msgid "Add Date"
+msgstr "Adicionar Data"
+
+#: class-fooevents-bookings.php:165 class-fooevents-bookings.php:230
+#: templates/booking-options-add-dates.php:40 templates/booking-options.php:79
+msgid "Unlimited stock"
+msgstr "Estoque ilimitado"
+
+#: class-fooevents-bookings.php:166 class-fooevents-bookings.php:231
+msgid "Webinars"
+msgstr "Webinars"
+
+#: class-fooevents-bookings.php:167 class-fooevents-bookings.php:232
+msgid "Meetings"
+msgstr "Reuniões"
+
+#: class-fooevents-bookings.php:168 class-fooevents-bookings.php:233
+msgid "Saving Changes"
+msgstr "Salvar Alterações"
+
+#: class-fooevents-bookings.php:169 class-fooevents-bookings.php:234
+#: templates/booking-options.php:104
+msgid "Save Changes"
+msgstr "Salvar Alterações"
+
+#: class-fooevents-bookings.php:170 class-fooevents-bookings.php:235
+msgid "Your booking options have been saved."
+msgstr "As suas opções de reserva foram guardadas."
+
+#: class-fooevents-bookings.php:171 class-fooevents-bookings.php:236
+msgid "Also delete Zoom meeting/webinar?"
+msgstr "Também excluir reunião/webinar do Zoom?"
+
+#: class-fooevents-bookings.php:172 class-fooevents-bookings.php:237
+msgid "Successfully deleted Zoom meeting/webinar."
+msgstr "Reunião/webinar do Zoom excluído com sucesso."
+
+#: class-fooevents-bookings.php:173 class-fooevents-bookings.php:238
+msgid "Unable to delete the Zoom meeting/webinar."
+msgstr "Não é possível excluir a reunião/webinar do Zoom."
+
+#: class-fooevents-bookings.php:174
+msgid "Are you sure that you want to remove this booking slot?"
+msgstr "Tem certeza de que deseja remover este horário de reserva?"
+
+#: class-fooevents-bookings.php:175
+msgid "Please enter a Start Date."
+msgstr "Por favor, insira uma Data de Início."
+
+#: class-fooevents-bookings.php:176
+msgid "Please enter an End Date. The End Date should be within a maximum of 6 months from the Start Date each time you generate new date slots."
+msgstr "Por favor, insira uma Data de Término. A Data de Término deve estar dentro de um máximo de 6 meses a partir da Data de Início cada vez que você gerar novos intervalos de datas."
+
+#: class-fooevents-bookings.php:177
+msgid "Please select the days of the week."
+msgstr "Por favor, selecione os dias da semana."
+
+#: class-fooevents-bookings.php:178
+msgid "The date range cannot exceed 6 months from the Start Date. Please adjust the End Date before proceeding. Note: You can reopen the Booking Wizard after completion to generate additional date slots if required."
+msgstr "A faixa de datas não pode exceder 6 meses a partir da Data de Início. Por favor, ajuste a Data de Término antes de prosseguir. Observação: Você pode reabrir o Assistente de Reservas após a conclusão para gerar slots de datas adicionais, se necessário."
+
+#: class-fooevents-bookings.php:181 class-fooevents-bookings.php:241
+msgid "Show a different month"
+msgstr "Mostrar um mês diferente"
+
+#: class-fooevents-bookings.php:213
+msgid "Event Overview"
+msgstr "Visão geral do evento"
+
+#: class-fooevents-bookings.php:214
+msgid "Select an event in the <strong>Event Details</strong> section."
+msgstr "Selecione um evento na seção <strong>Detalhes do Evento</strong>."
+
+#: class-fooevents-bookings.php:268
+msgid "Loading..."
+msgstr "A carregar..."
+
+#: class-fooevents-bookings.php:320
+msgid "Booking Settings"
+msgstr "Configurações de Reserva"
+
+#: class-fooevents-bookings.php:342 class-fooevents-bookings.php:679
+#: class-fooevents-bookings.php:1263 class-fooevents-bookings.php:1539
+#: class-fooevents-bookings.php:1730 class-fooevents-bookings.php:1873
+#: class-fooevents-bookings.php:2844 class-fooevents-bookings.php:3807
+#: class-fooevents-bookings.php:3844 class-fooevents-bookings.php:4387
+#: class-fooevents-bookings.php:4422 class-fooevents-bookings.php:5740
+msgid "Slot"
+msgstr "Slot"
+
+#: class-fooevents-bookings.php:402
+msgid "Security check failed - FooEvents Bookings 0002"
+msgstr "Verificação de segurança falhou - Reservas FooEvents 0002"
+
+#: class-fooevents-bookings.php:689 class-fooevents-bookings.php:1273
+#: class-fooevents-bookings.php:1529 class-fooevents-bookings.php:1720
+#: class-fooevents-bookings.php:1863 class-fooevents-bookings.php:2854
+#: class-fooevents-bookings.php:3797 class-fooevents-bookings.php:3854
+#: class-fooevents-bookings.php:4377 class-fooevents-bookings.php:4432
+#: class-fooevents-bookings.php:5750
+msgid "Date"
+msgstr "Data"
+
+#: class-fooevents-bookings.php:698 class-fooevents-bookings.php:707
+#: class-fooevents-bookings.php:803 class-fooevents-bookings.php:931
+#: class-fooevents-bookings.php:1084 class-fooevents-bookings.php:1282
+#: class-fooevents-bookings.php:1284 class-fooevents-bookings.php:1293
+#: class-fooevents-bookings.php:1309 class-fooevents-bookings.php:3863
+#: class-fooevents-bookings.php:3865 class-fooevents-bookings.php:4020
+#: class-fooevents-bookings.php:4185 class-fooevents-bookings.php:4441
+#: class-fooevents-bookings.php:4443
+#, php-format
+msgid "Select %s"
+msgstr "Selecione %s"
+
+#: class-fooevents-bookings.php:724 class-fooevents-bookings.php:1012
+#: class-fooevents-bookings.php:1155 class-fooevents-bookings.php:1469
+#: class-fooevents-bookings.php:2512 class-fooevents-bookings.php:2648
+#: class-fooevents-bookings.php:2802 class-fooevents-bookings.php:2906
+#: class-fooevents-bookings.php:3154 class-fooevents-bookings.php:3204
+#: class-fooevents-bookings.php:3260 class-fooevents-bookings.php:3950
+#: class-fooevents-bookings.php:4257 class-fooevents-bookings.php:4462
+msgid "Unlimited"
+msgstr "Ilimitado"
+
+#: class-fooevents-bookings.php:1749 class-fooevents-bookings.php:1853
+#: class-fooevents-bookings.php:3819 class-fooevents-bookings.php:4399
+msgid "Booking details"
+msgstr "Detalhes da reserva"
+
+#: class-fooevents-bookings.php:1921 class-fooevents-bookings.php:2047
+#: class-fooevents-bookings.php:4794
+msgid "date"
+msgstr "data"
+
+#: class-fooevents-bookings.php:1931 class-fooevents-bookings.php:2057
+#: class-fooevents-bookings.php:4804
+msgid "slot"
+msgstr "horário"
+
+#: class-fooevents-bookings.php:1941 class-fooevents-bookings.php:2067
+msgid "Attendee"
+msgstr "Participante"
+
+#: class-fooevents-bookings.php:1955 class-fooevents-bookings.php:1966
+#: class-fooevents-bookings.php:1977 class-fooevents-bookings.php:1988
+#: class-fooevents-bookings.php:1999
+#, php-format
+msgid "Please select the %1$s field for <strong>%2$s %3$d</strong> (%4$s) "
+msgstr "Por favor, selecione o campo %1$s para <strong>%2$s %3$d</strong> (%4$s)"
+
+#: class-fooevents-bookings.php:2011 class-fooevents-bookings.php:2019
+#, php-format
+msgid "Please select the %1$s and %2$s field for <strong>%3$s %4$d</strong> (%5$s) "
+msgstr "Por favor, selecione o campo %1$s e %2$s para <strong>%3$s %4$d</strong> (%5$s)"
+
+#: class-fooevents-bookings.php:2113 class-fooevents-bookings.php:2132
+#, php-format
+msgid "The selected %1$s/%2$s is not available for <strong>%3$s %4$d</strong> (%5$s)."
+msgstr "O %1$s/%2$s selecionado não está disponível para <strong>%3$s %4$d</strong> (%5$s)."
+
+#: class-fooevents-bookings.php:2148 class-fooevents-bookings.php:4923
+#: class-fooevents-bookings.php:4944 class-fooevents-bookings.php:5047
+#, php-format
+msgid "<strong>Availability:</strong> The selected %1$s/%2$s is not available."
+msgstr "<strong>Disponibilidade:</strong> O %1$s/%2$s selecionado não está disponível."
+
+#: class-fooevents-bookings.php:2197
+#, php-format
+msgid "The selected %1$s/%2$s is not available for <strong>%3$s %4$d</strong> (%5$s). Date has expired."
+msgstr "A %1$s/%2$s selecionado não está disponível para <strong>%3$s %4$d</strong> (%5$s). A data expirou."
+
+#: class-fooevents-bookings.php:2301
+#, php-format
+msgid "%1$s only has %2$d bookings available."
+msgstr "%1$s tem apenas %2$d reservas disponíveis."
+
+#: class-fooevents-bookings.php:2862 class-fooevents-bookings.php:2863
+msgid "Select "
+msgstr "Selecione"
+
+#: class-fooevents-bookings.php:2916 class-fooevents-bookings.php:2993
+msgid "No stock availabe for selected booking"
+msgstr "Não há estoque disponível para a reserva selecionada"
+
+#: class-fooevents-bookings.php:2947
+msgid "Booking slot is required."
+msgstr "É necessário agendar um horário."
+
+#: class-fooevents-bookings.php:2960
+msgid "Booking date is required."
+msgstr "A data de reserva é obrigatória."
+
+#: class-fooevents-bookings.php:2973
+msgid "Event is required."
+msgstr "É necessário um evento."
+
+#: class-fooevents-bookings.php:3028
+msgid "Security check failed - FooEvents Bookings 0004"
+msgstr "Verificação de segurança falhou - Reservas FooEvents 0004"
+
+#: class-fooevents-bookings.php:3146 class-fooevents-bookings.php:3200
+#: class-fooevents-bookings.php:3256
+msgid "0"
+msgstr "0"
+
+#: class-fooevents-bookings.php:3164 class-fooevents-bookings.php:3212
+#: class-fooevents-bookings.php:3268
+msgid "Availability: "
+msgstr "Disponibilidade:"
+
+#: class-fooevents-bookings.php:3376 class-fooevents-bookings.php:3539
+#: templates/bookings-term-options.php:17
+msgid "Date:"
+msgstr "Data:"
+
+#: class-fooevents-bookings.php:3386 class-fooevents-bookings.php:3549
+#: templates/bookings-term-options.php:11
+msgid "Slot:"
+msgstr "Horário:"
+
+#: class-fooevents-bookings.php:4852 class-fooevents-bookings.php:4862
+#: class-fooevents-bookings.php:4872 class-fooevents-bookings.php:4882
+#, php-format
+msgid "<strong>Error:</strong> Please select a %s."
+msgstr "<strong>Erro:</strong> Por favor, selecione um %s."
+
+#: class-fooevents-bookings.php:4967 class-fooevents-bookings.php:4986
+#: class-fooevents-bookings.php:5009 class-fooevents-bookings.php:5070
+#: class-fooevents-bookings.php:5092
+msgid "<strong>Error:</strong> You have exceeded the number of available booking slots. Please reduce the quantity in your cart before continuing with the checkout process."
+msgstr "<strong>Erro:</strong> Você excedeu o número de vagas de reserva disponíveis. Por favor, reduza a quantidade no seu carrinho antes de prosseguir com o processo de checkout."
+
+#: class-fooevents-bookings.php:5554
+msgid "Security check failed - FooEvents Bookings 0005"
+msgstr "Verificação de segurança falhou - Reservas FooEvents 0005"
+
+#: classes/class-fooevents-bookings-admin.php:152
+#: templates/booking-options.php:11 templates/bookings-admin-listing.php:12
+msgid "Bookings"
+msgstr "Reservas"
+
+#: templates/booking-options-add-dates.php:18
+msgid "Start Date"
+msgstr "Data de Início"
+
+#: templates/booking-options-add-dates.php:22
+msgid "End Date"
+msgstr "Data de término"
+
+#: templates/booking-options-add-dates.php:28
+msgid "Days of Week"
+msgstr "Dias da Semana"
+
+#: templates/booking-options-add-dates.php:29
+msgid "Mon"
+msgstr "Segunda-feira"
+
+#: templates/booking-options-add-dates.php:30
+msgid "Tue"
+msgstr "Ter"
+
+#: templates/booking-options-add-dates.php:31
+msgid "Wed"
+msgstr "Qua"
+
+#: templates/booking-options-add-dates.php:32
+msgid "Thur"
+msgstr "Quinta"
+
+#: templates/booking-options-add-dates.php:33
+msgid "Fri"
+msgstr "Sexta-feira"
+
+#: templates/booking-options-add-dates.php:34
+msgid "Sat"
+msgstr "Sáb"
+
+#: templates/booking-options-add-dates.php:35
+msgid "Sun"
+msgstr "Domingo"
+
+#: templates/booking-options-add-dates.php:39
+msgid "Default Stock Availability"
+msgstr "Disponibilidade de Estoque Padrão"
+
+#: templates/booking-options.php:18
+#, php-format
+msgid "+ New %s"
+msgstr "+ Novo %s"
+
+#: templates/booking-options.php:19
+msgid "Expand"
+msgstr "Expandir"
+
+#: templates/booking-options.php:19
+msgid "Close"
+msgstr "Fechado"
+
+#: templates/booking-options.php:68
+msgid "Add dates"
+msgstr "Adicionar datas"
+
+#: templates/booking-options.php:97
+msgid "No slots found. Create your first one."
+msgstr "Nenhum horário disponível. Crie o seu primeiro."
+
+#: templates/bookings-add-ticket.php:12
+msgid "Booking Details"
+msgstr "Detalhes da Reserva"
+
+#: templates/bookings-admin-listing.php:19
+msgid "Select Booking Event"
+msgstr "Selecionar Evento de Reserva"
+
+#: templates/bookings-admin-listing.php:25
+msgid "All Booking Slots"
+msgstr "Todos os Slots de Reserva"
+
+#: templates/bookings-edit-ticket.php:15 templates/bookings-edit-ticket.php:38
+#, php-format
+msgid "Select Booking %s"
+msgstr "Selecionar Reserva %s"
+
+#: templates/bookings-expiration-options.php:10
+msgid "Bookings Expiration"
+msgstr "Expiração de Reservas"
+
+#: templates/bookings-expiration-options.php:13
+msgid "Expire bookings"
+msgstr "Expirar reservas"
+
+#: templates/bookings-expiration-options.php:15
+msgid "Hides bookings if the dates have already passed or at a specified amount of time before they are scheduled to start."
+msgstr "Oculta reservas se as datas já passaram ou em um período de tempo especificado antes de começarem."
+
+#: templates/bookings-expiration-options.php:18
+msgid "Select time before:"
+msgstr "Selecione o horário antes:"
+
+#: templates/bookings-expiration-options.php:25
+msgid "Minutes"
+msgstr "Minutos"
+
+#: templates/bookings-expiration-options.php:26
+msgid "Hours"
+msgstr "Horas"
+
+#: templates/bookings-expiration-options.php:27
+msgid "Days"
+msgstr "Dias"
+
+#: templates/bookings-expiration-options.php:28
+msgid "Weeks"
+msgstr "Semanas"
+
+#: templates/bookings-expiration-options.php:29
+msgid "Months"
+msgstr "Meses"
+
+#: templates/bookings-expiration-options.php:30
+msgid "Years"
+msgstr "Anos"
+
+#: templates/bookings-expiration-options.php:32
+msgid "Select the unit of time to be used to automatically expire bookings."
+msgstr "Selecione a unidade de tempo a ser usada para expirar automaticamente as reservas."
+
+#: templates/bookings-term-options.php:14
+msgid "Change 'Slot' to your own custom text for this event."
+msgstr "Mude 'Slot' para o seu próprio texto personalizado para este evento."
+
+#: templates/bookings-term-options.php:20
+msgid "Change 'Date' to your own custom text for this event."
+msgstr "Altere 'Data' para o seu próprio texto personalizado para este evento."
+
+#: templates/bookings-term-options.php:23
+msgid "Booking details:"
+msgstr "Detalhes da reserva:"
+
+#: templates/bookings-term-options.php:26
+msgid "Change the 'Booking details' label to your own custom text for this event."
+msgstr "Altere o rótulo 'Detalhes da reserva' para o seu próprio texto personalizado para este evento."

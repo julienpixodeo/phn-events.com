@@ -1,0 +1,55 @@
+2024-10-17T07:53:20+00:00 NOTICE Generating payment form for order #31369. CONTEXT: {"_legacy":true}
+2024-10-17T07:53:20+00:00 NOTICE Data to be sent to payment gateway : Array
+(
+    [signature] => xmgk7BK//ZTnsoKVSeLoFAE804AzwBmKvXR1whzcZ9g=
+    [vads_action_mode] => INTERACTIVE
+    [vads_amount] => 100
+    [vads_capture_delay] => 
+    [vads_contrib] => WooCommerce_2.x-8.x_1.13.1/6.6.2_8.7.0/8.1.29
+    [vads_ctx_mode] => PRODUCTION
+    [vads_currency] => 978
+    [vads_cust_address] => 500 nice Test 1
+    [vads_cust_city] => nice
+    [vads_cust_country] => FR
+    [vads_cust_email] => emma@pixodeo.net
+    [vads_cust_first_name] => pixo
+    [vads_cust_id] => 1
+    [vads_cust_last_name] => emma
+    [vads_cust_phone] => +33111111111
+    [vads_cust_state] => 
+    [vads_cust_status] => 
+    [vads_cust_zip] => 06000
+    [vads_cust_national_id] => 
+    [vads_cust_address_number] => 
+    [vads_cust_district] => nice
+    [vads_language] => en
+    [vads_order_id] => 31369
+    [vads_page_action] => PAYMENT
+    [vads_payment_cards] => 
+    [vads_payment_config] => SINGLE
+    [vads_redirect_error_message] => Redirection to shop in a few seconds...
+    [vads_redirect_error_timeout] => 5
+    [vads_redirect_success_message] => Redirection to shop in a few seconds...
+    [vads_redirect_success_timeout] => 5
+    [vads_return_mode] => POST
+    [vads_ship_to_city] => nice
+    [vads_ship_to_country] => FR
+    [vads_ship_to_first_name] => pixo
+    [vads_ship_to_last_name] => emma
+    [vads_ship_to_state] => 
+    [vads_ship_to_street] => 500 nice
+    [vads_ship_to_street2] => Test 1
+    [vads_ship_to_zip] => 06000
+    [vads_shipping_amount] => 0
+    [vads_site_id] => 98191832
+    [vads_totalamount_vat] => 9
+    [vads_trans_date] => 20241017075320
+    [vads_trans_id] => 284008
+    [vads_url_return] => https://phnstaging.pixodeo.dev/?wc-api=WC_Gateway_Systempay
+    [vads_validation_mode] => 
+    [vads_version] => V2
+    [vads_ext_info_order_key] => wc_order_H6Xk5F1yzT85e
+    [vads_ext_info_blog_id] => 0
+    [vads_ext_info_session_id] => N8B2KrNUQqjc2AI92vr3k46quixNm47oWscJJGMslkQ
+)
+ CONTEXT: {"_legacy":true}

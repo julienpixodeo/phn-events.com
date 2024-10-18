@@ -1,0 +1,268 @@
+	/* Common styles for both main containers */
+	.rs-shortcode-box-content,
+	.rs-shortcode-main-features {
+	    background-color: #f9f9f9;
+	    padding: 20px;
+	    border-radius: 10px;
+	    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	    margin-bottom: 20px;
+	}
+
+	/* Main title styling */
+	.main-title {
+	    font-size: 24px;
+	    color: #333;
+	    margin-bottom: 20px;
+	    text-align: center;
+	}
+
+	/* Video wrapper styling */
+	.rs-shortcode-video-wrapper {
+	    display: flex;
+	    flex-wrap: wrap; /* Allow videos to wrap to the next line on smaller screens */
+	    justify-content: center;
+	    margin-top: 20px;
+	}
+
+	/* Individual video column styling */
+	.rs-shortcode-video-col {
+	    margin: 10px;
+	    flex: 1; /* Make videos take equal width in a row */
+	    text-align: center;
+	}
+
+	/* Embedded iframe styling */
+	.rs-shortcode-video-col iframe {
+	    width: 100%; /* Make the iframe responsive */
+	    max-width: 600px; /* Set a maximum width to prevent overflow */
+	    height: 400px; /* Set a fixed height for consistency */
+	    border: none; /* Remove border */
+	    border-radius: 8px; /* Add some border radius for aesthetics */
+	    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+	}
+
+	/* Hover effect on video columns */
+	.rs-shortcode-video-col:hover {
+	    transform: scale(1.05);
+	    transition: transform 0.3s ease;
+	}
+
+	/* Call-to-action button styling */
+	.rs-shortcode-call-to-action {
+	    padding: 10px;
+	    text-align: center;
+	}
+
+	.rt-update-pro-btn {
+	    text-decoration: none;
+	    padding: 8px 16px;
+	    border-radius: 5px;
+	    font-weight: bold;
+	    font-size: 16px;
+	}
+
+	/* Media query for smaller screens */
+	@media only screen and (max-width: 768px) {
+	    /* Adjustments for smaller screens */
+	    .rs-shortcode-video-col {
+	        flex: 100%; /* Make videos take full width on smaller screens */
+	    }
+
+	    /* You can add more adjustments as needed for smaller screens */
+
+	    /* Example: Reduce padding on smaller screens */
+	    .rs-shortcode-box-content,
+	    .rs-shortcode-main-features {
+	        padding: 10px;
+	    }
+	}
+	/* Style the features container */
+	.rs-shortcode-pro-features {
+	    display: flex;
+	    justify-content: center;
+	}
+
+	/* Style the individual feature content */
+	.rs-shortcode-pro-features-content {
+	    margin: 10px;
+	}
+
+	/* Style the feature list items */
+	.rs-shortcode-pro-features-content ul {
+	    list-style: none;
+	    padding: 0;
+	}
+
+	.rs-shortcode-pro-features-content ul li {
+	    margin-bottom: 15px;
+	    display: flex;
+	    align-items: center;
+	}
+
+	/* Style the icons */
+	.rs-shortcode-pro-features-content ul li .icon {
+	    margin-right: 10px;
+	}
+
+	/* Style the SVG icons */
+	.icon svg {
+	    width: 20px;
+	    height: 20px;
+	    stroke: rgba(0, 0, 0, 0.95);
+	    stroke-width: 1.5;
+	    stroke-linecap: round;
+	    stroke-linejoin: round;
+	}
+
+	/* Style the feature text */
+	.rs-shortcode-pro-features-content ul li {
+	    font-size: 14px;
+	    color: #555;
+	}
+
+	/* Add hover effect to the features */
+	.rs-shortcode-pro-features-content ul li:hover {
+	    background-color: #e0e0e0;
+	    transition: background-color 0.3s ease;
+	}
+
+
+	  /*New*/
+	  
+	  /* Styling for the testimonials section */
+	  .rs-shortcode-document-box {
+	    display: flex;
+	    justify-content: center;
+	    margin-bottom: 20px;
+	    flex-basis: 33%;
+	  }
+
+	  .rs-shortcode-box-icon {
+	    margin-right: 10px; /* Adjust the margin as needed */
+	  }
+
+	  .rs-shortcode-box-content {
+	    /*flex-grow: 1;*/
+	  }
+
+	  .rs-shortcode-box-title {
+	    color: blue; /* Adjust the color as needed */
+	  }
+
+	  .rs-shortcode-testimonials {
+	    display: flex;
+	    justify-content: center;
+	    margin-bottom: 20px;
+	  }
+
+	  .rs-shortcode-testimonial {
+	    flex-basis: 30%;
+	    margin: 0 10px; /* Adjust the margin as needed */
+	  }
+
+	  .rs-shortcode-testimonial p {
+	    font-size: 14px;
+	    line-height: 1.5;
+	    color: #333; /* Adjust the color as needed */
+	  }
+
+	  .client-info {
+	    display: flex;
+	    align-items: center;
+	    margin-top: 10px; /* Adjust the margin as needed */
+	  }
+
+	  .client-info img {
+	    border-radius: 50%; /* Make the image round */
+	    margin-right: 10px; /* Adjust the margin as needed */
+	  }
+
+	  .rtteam-star {
+	    color: gold; /* Adjust the color as needed */
+	  }
+
+	  .client-name {
+	    font-weight: bold;
+	    margin-left: 5px; /* Adjust the margin as needed */
+	  }
+	  .doc-section {
+	    margin-bottom: 20px;
+	    display: flex;
+	    justify-content: center;
+	  }
+
+	  .rs-shortcode-document-box {
+	    
+	    text-align: center;
+	    background-color: #f5f5f5; /* Adjust the background color as needed */
+	    padding: 20px;
+	    border-radius: 10px; /* Adjust the border radius as needed */
+	  }
+
+	  .rs-shortcode-box-icon {
+	    font-size: 24px;
+	    margin-bottom: 10px;
+	  }
+
+	  .rs-shortcode-box-content {
+	    color: #333; /* Adjust the text color as needed */
+	  }
+
+	  .rs-shortcode-box-title {
+	    font-size: 18px;
+	    color: blue; /* Adjust the title color as needed */
+	  }
+
+	  .rs-shortcode-box-content p {
+	    margin-bottom: 15px;
+	  }
+
+
+	.rs-shortcode-admin-btn {
+	    display: inline-block;
+	    padding: 10px 20px;
+	    background-color: blue; /* Adjust the default button background color as needed */
+	    color: white; /* Adjust the default button text color as needed */
+	    text-decoration: none;
+	    border-radius: 5px; /* Adjust the border radius as needed */
+	    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+	  }
+
+	.rs-shortcode-admin-btn:hover {
+		background-color: #f0f0f0; /* Adjust the button background color on hover as needed */
+		color: blue; /* Adjust the button text color on hover as needed */
+	}
+	.rs-shortcode-admin-btn:active {
+		background-color: blue; /* Adjust the button background color on hover as needed */
+		color: #ffffff; /* Adjust the button text color on hover as needed */
+	}
+
+	.rt-update-pro-btn:hover {
+		background-color: white; /* Adjust the button background color on hover as needed */
+		color: blue; /* Adjust the button text color on hover as needed */
+	}
+	.rs-shortcode-call-to-action {
+		background-color: blue; /* Adjust the background color as needed */
+		text-align: center;
+		padding: 10px; /* Adjust the padding as needed */
+		border-radius: 5px; /* Adjust the border radius as needed */
+	}
+
+	.rt-update-pro-btn {
+		text-decoration: none;
+		color: white; /* Adjust the text color as needed */
+		font-weight: bold;
+		font-size: 16px;
+		padding: 8px 16px;
+		border-radius: 5px; /* Adjust the border radius as needed */
+		transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+	}
+
+	.rt-update-pro-btn:hover {
+		background-color: #003366; /* Change the hover background color as needed */
+		color: #ffffff; /* Change the hover text color as needed */
+	}
+
+	.clear-fixed{
+		clear :both;
+	}

@@ -1,0 +1,130 @@
+2024-10-17T07:55:14+00:00 INFO ENVIRONMENT: array (
+  'WP_User' => 'pixodeo',
+  'HTTP_REFERER' => 'https://phnstaging.pixodeo.dev/wp-admin/admin.php?page=wc-settings&tab=checkout',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0',
+  'REQUEST_URI' => '/wp-json/wc/v3/payments/settings?_locale=user',
+  'DOING_AJAX' => false,
+  'DOING_CRON' => false,
+  'WP_CLI' => false,
+)
+2024-10-17T07:55:14+00:00 INFO REQUEST GET https://public-api.wordpress.com/wpcom/v2/sites/%s/wcpay/fraud_ruleset?test_mode=1
+2024-10-17T07:55:14+00:00 INFO HEADERS: array (
+  'Content-Type' => 'application/json; charset=utf-8',
+  'User-Agent' => 'WooCommerce Payments/7.4.0',
+)
+2024-10-17T07:55:14+00:00 INFO HTTP_REQUEST_ERROR Site is not connected to WordPress.com
+2024-10-17T07:55:56+00:00 INFO ENVIRONMENT: array (
+  'WP_User' => 'pixodeo',
+  'HTTP_REFERER' => 'https://phnstaging.pixodeo.dev/wp-admin/admin.php?page=wc-settings&tab=checkout',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0',
+  'REQUEST_URI' => '/wp-json/wc/v3/payments/settings?_locale=user',
+  'DOING_AJAX' => false,
+  'DOING_CRON' => false,
+  'WP_CLI' => false,
+)
+2024-10-17T07:55:56+00:00 INFO REQUEST GET https://public-api.wordpress.com/wpcom/v2/sites/%s/wcpay/fraud_ruleset?test_mode=1
+2024-10-17T07:55:56+00:00 INFO HEADERS: array (
+  'Content-Type' => 'application/json; charset=utf-8',
+  'User-Agent' => 'WooCommerce Payments/7.4.0',
+)
+2024-10-17T07:55:56+00:00 INFO HTTP_REQUEST_ERROR Site is not connected to WordPress.com
+2024-10-17T08:03:54+00:00 INFO ENVIRONMENT: array (
+  'WP_User' => 'pixodeo',
+  'HTTP_REFERER' => 'https://phnstaging.pixodeo.dev/wp-admin/admin.php?page=wc-settings&tab=checkout',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0',
+  'REQUEST_URI' => '/wp-json/wc/v3/payments/settings?_locale=user',
+  'DOING_AJAX' => false,
+  'DOING_CRON' => false,
+  'WP_CLI' => false,
+)
+2024-10-17T08:03:54+00:00 INFO REQUEST GET https://public-api.wordpress.com/wpcom/v2/sites/%s/wcpay/fraud_ruleset?test_mode=1
+2024-10-17T08:03:54+00:00 INFO HEADERS: array (
+  'Content-Type' => 'application/json; charset=utf-8',
+  'User-Agent' => 'WooCommerce Payments/7.4.0',
+)
+2024-10-17T08:03:54+00:00 INFO HTTP_REQUEST_ERROR Site is not connected to WordPress.com
+2024-10-17T08:04:09+00:00 INFO ENVIRONMENT: array (
+  'WP_User' => 'pixodeo',
+  'HTTP_REFERER' => 'https://phnstaging.pixodeo.dev/wp-admin/admin.php?page=wc-settings&tab=checkout',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0',
+  'REQUEST_URI' => '/wp-json/wc/v3/payments/settings?_locale=user',
+  'DOING_AJAX' => false,
+  'DOING_CRON' => false,
+  'WP_CLI' => false,
+)
+2024-10-17T08:04:10+00:00 INFO REQUEST GET https://public-api.wordpress.com/wpcom/v2/sites/%s/wcpay/fraud_ruleset?test_mode=1
+2024-10-17T08:04:10+00:00 INFO HEADERS: array (
+  'Content-Type' => 'application/json; charset=utf-8',
+  'User-Agent' => 'WooCommerce Payments/7.4.0',
+)
+2024-10-17T08:04:10+00:00 INFO HTTP_REQUEST_ERROR Site is not connected to WordPress.com
+2024-10-17T08:15:18+00:00 INFO ENVIRONMENT: array (
+  'WP_User' => 'pixodeo',
+  'HTTP_REFERER' => 'https://phnstaging.pixodeo.dev/wp-admin/admin.php?page=wc-settings&tab=checkout',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+  'REQUEST_URI' => '/wp-json/wc/v3/payments/settings?_locale=user',
+  'DOING_AJAX' => false,
+  'DOING_CRON' => false,
+  'WP_CLI' => false,
+)
+2024-10-17T08:15:18+00:00 INFO REQUEST GET https://public-api.wordpress.com/wpcom/v2/sites/%s/wcpay/fraud_ruleset?test_mode=1
+2024-10-17T08:15:18+00:00 INFO HEADERS: array (
+  'Content-Type' => 'application/json; charset=utf-8',
+  'User-Agent' => 'WooCommerce Payments/7.4.0',
+)
+2024-10-17T08:15:18+00:00 INFO HTTP_REQUEST_ERROR Site is not connected to WordPress.com
+2024-10-17T08:43:06+00:00 INFO ENVIRONMENT: array (
+  'WP_User' => 'Guest (non logged-in user)',
+  'HTTP_REFERER' => '--',
+  'HTTP_USER_AGENT' => 'WordPress/6.6.2; https://phnstaging.pixodeo.dev',
+  'REQUEST_URI' => '/wp-cron.php?doing_wp_cron=1729154585.0705239772796630859375',
+  'DOING_AJAX' => false,
+  'DOING_CRON' => true,
+  'WP_CLI' => false,
+)
+2024-10-17T08:43:06+00:00 INFO REQUEST GET https://public-api.wordpress.com/wpcom/v2/wcpay/woopay/compatibility?test_mode=1
+2024-10-17T08:43:06+00:00 INFO HEADERS: array (
+  'Content-Type' => 'application/json; charset=utf-8',
+  'User-Agent' => 'WooCommerce Payments/7.4.0',
+)
+2024-10-17T08:43:06+00:00 INFO HTTP_REQUEST_ERROR Site is not connected to WordPress.com
+2024-10-17T08:43:06+00:00 INFO Failed to decode WooPay incompatible extensions list. WCPay\Exceptions\API_Exception: Site is not connected to WordPress.com in /home/clients/f6dddfb153d25cf9a171541cb185b6c7/sites/phnstaging.pixodeo.dev/wp-content/plugins/woocommerce-payments/includes/wc-payment-api/class-wc-payments-http.php:61
+Stack trace:
+#0 /home/clients/f6dddfb153d25cf9a171541cb185b6c7/sites/phnstaging.pixodeo.dev/wp-content/plugins/woocommerce-payments/includes/wc-payment-api/class-wc-payments-api-client.php(1864): WC_Payments_Http->remote_request(Array, NULL, false, false)
+#1 /home/clients/f6dddfb153d25cf9a171541cb185b6c7/sites/phnstaging.pixodeo.dev/wp-content/plugins/woocommerce-payments/includes/wc-payment-api/class-wc-payments-api-client.php(2493): WC_Payments_API_Client->request(Array, 'woopay/compatib...', 'GET', false)
+#2 /home/clients/f6dddfb153d25cf9a171541cb185b6c7/sites/phnstaging.pixodeo.dev/wp-content/plugins/woocommerce-payments/includes/woopay/class-woopay-scheduler.php(85): WC_Payments_API_Client->get_woopay_compatibility()
+#3 /home/clients/f6dddfb153d25cf9a171541cb185b6c7/sites/phnstaging.pixodeo.dev/wp-includes/class-wp-hook.php(324): WCPay\WooPay\WooPay_Scheduler->update_compatibility_and_maybe_show_incompatibility_warning()
+#4 /home/clients/f6dddfb153d25cf9a171541cb185b6c7/sites/phnstaging.pixodeo.dev/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#5 /home/clients/f6dddfb153d25cf9a171541cb185b6c7/sites/phnstaging.pixodeo.dev/wp-includes/plugin.php(565): WP_Hook->do_action(Array)
+#6 /home/clients/f6dddfb153d25cf9a171541cb185b6c7/sites/phnstaging.pixodeo.dev/wp-cron.php(191): do_action_ref_array('validate_woopay...', Array)
+#7 {main}
+2024-10-17T08:45:30+00:00 INFO ENVIRONMENT: array (
+  'WP_User' => 'pixodeo',
+  'HTTP_REFERER' => 'https://phnstaging.pixodeo.dev/wp-admin/admin.php?page=wc-settings&tab=checkout',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 OPR/113.0.0.0',
+  'REQUEST_URI' => '/wp-json/wc/v3/payments/settings?_locale=user',
+  'DOING_AJAX' => false,
+  'DOING_CRON' => false,
+  'WP_CLI' => false,
+)
+2024-10-17T08:45:30+00:00 INFO REQUEST GET https://public-api.wordpress.com/wpcom/v2/sites/%s/wcpay/fraud_ruleset?test_mode=1
+2024-10-17T08:45:30+00:00 INFO HEADERS: array (
+  'Content-Type' => 'application/json; charset=utf-8',
+  'User-Agent' => 'WooCommerce Payments/7.4.0',
+)
+2024-10-17T08:45:30+00:00 INFO HTTP_REQUEST_ERROR Site is not connected to WordPress.com
+2024-10-17T09:20:37+00:00 INFO ENVIRONMENT: array (
+  'WP_User' => 'pixodeo',
+  'HTTP_REFERER' => 'https://phnstaging.pixodeo.dev/wp-admin/admin.php?page=wc-settings&tab=checkout',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'REQUEST_URI' => '/wp-json/wc/v3/payments/settings?_locale=user',
+  'DOING_AJAX' => false,
+  'DOING_CRON' => false,
+  'WP_CLI' => false,
+)
+2024-10-17T09:20:37+00:00 INFO REQUEST GET https://public-api.wordpress.com/wpcom/v2/sites/%s/wcpay/fraud_ruleset?test_mode=1
+2024-10-17T09:20:37+00:00 INFO HEADERS: array (
+  'Content-Type' => 'application/json; charset=utf-8',
+  'User-Agent' => 'WooCommerce Payments/7.4.0',
+)
+2024-10-17T09:20:37+00:00 INFO HTTP_REQUEST_ERROR Site is not connected to WordPress.com
