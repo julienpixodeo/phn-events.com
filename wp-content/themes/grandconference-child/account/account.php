@@ -280,7 +280,6 @@ function get_email_by_user_id($user_id) {
 // get user orders info
 function get_user_orders_info() {
     $user_id = get_current_user_id();
-    // $user_id = 7;
     if(isset($_SESSION['lan_st'])){
         $lan_st = $_SESSION['lan_st'];
     }else{
@@ -298,6 +297,7 @@ function get_user_orders_info() {
         $text_refund_all  = 'Rembourser tout';
         $error_user_login = 'Utilisateur non connecté.';
         $error_user_no_order = 'Vous n\'avez pas encore de commandes.';
+        $cancellation_date_has_passed = 'Date d\'annulation dépassée';
     }else{
         $text_order_id = 'Order ID';
         $text_order_date = 'Order date';
@@ -309,6 +309,7 @@ function get_user_orders_info() {
         $text_refund_all  = 'Refund all';
         $error_user_login = 'User not logged in.';
         $error_user_no_order = 'You have no orders yet.';
+        $cancellation_date_has_passed = 'Cancellation date has passed';
     }
     if ($user_id) {
         session_start();
@@ -438,6 +439,10 @@ function get_user_orders_info() {
                         '.$text_refund.'
                         </button>';
                         echo '<div class="message-box" id="message-' . $item_id . '"></div>';
+                    }else{
+                        if(isset($date_refund_timestamp) && $date_refund_timestamp < $current && status_item_order($meta_data) == true){
+                            echo $cancellation_date_has_passed;
+                        }
                     }
                     echo '</div>';
                     echo '</div>';
@@ -462,11 +467,15 @@ function get_user_orders_info() {
                         if($date_refund_timestamp > $current){
                             echo '<button class="refund-button" data-order-id="' . $order_id . '" data-message-id="' . $order_id . '" >'.$text_refund.'</button>';
                             echo '<div class="message-box" id="message-' . $order_id . '"></div>';
+                        }else{
+                            echo $cancellation_date_has_passed;
                         }
                     }else{
                         if(check_show_refund_all($order_id) == true){
                             echo '<button class="refund-button" data-order-id="' . $order_id . '" data-message-id="' . $order_id . '" >'.$text_refund_all.'</button>';
                             echo '<div class="message-box" id="message-' . $order_id . '"></div>';
+                        }else{
+                            echo $cancellation_date_has_passed;
                         }
                     }
                 }
