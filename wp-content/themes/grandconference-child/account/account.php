@@ -431,7 +431,7 @@ function get_user_orders_info() {
                     }
                
                     // if ($order_status === 'completed' && count($items) != 1) {
-                    if (isset($date_refund_timestamp) && count($items) != 1 && status_item_order($meta_data) == true && $date_refund_timestamp > $current && $order_status !== 'refunded' && $order_status === 'completed') {
+                    if ($item->get_total() != "0" && isset($date_refund_timestamp) && count($items) != 1 && status_item_order($meta_data) == true && $date_refund_timestamp > $current && $order_status !== 'refunded' && $order_status === 'completed') {
                         echo '<button class="refund-button" data-order-id="' . $order_id . '" 
                         data-message-id="' . $item_id . '" 
                         data-order-item="' . $item_id . '"
@@ -450,7 +450,7 @@ function get_user_orders_info() {
                 echo '</div>'; // End of order items
 
                 // if ($order_status === 'completed' && count($items) === 1) {
-                if ($order_status !== 'refunded' && $order_status === 'completed') {
+                if ($order_status !== 'refunded' && $order_status === 'completed' && $order_total != "0.00") {
                     if (count($items) === 1) {
                         if(event_true($order_id) == false){
                             $date_refund = get_field('date_refund',$event_id);
@@ -579,6 +579,32 @@ function process_ajax_refund() {
                     update_stock_each_day_variation_hotel_and_stock_event_item($order,$order_item);   
                 }
                 add_status_refund_item_order($order,$order_item,$order_id);
+                // Set email subject
+                $subject = 'Votre commande n°'.$order->get_order_number().' sur PHN Consulting a été partiellement remboursée';
+                $mailer = WC()->mailer();
+                $status = $order->get_status();
+
+                // if ($status === 'refunded') {
+                //     $email_heading =  'Remboursement partiel : commande n°'.$order_id.'';
+                // } else {
+                //     $email_heading =  'Commande remboursée : '.$order_id.'';
+                // }
+                
+                $email_heading =  'Commande remboursée : '.$order_id.'';
+
+                $email_body = wc_get_template_html(
+                    'emails/customer-refunded-order.php',
+                    array(
+                        'order'        => $order,
+                        'refund'       => $refund,
+                        'email_heading' => $email_heading,
+                    )
+                );
+ 
+                $admin_email = 'contact@phn-events.com';
+                $headers = array('Content-Type: text/html; charset=UTF-8');
+                $mailer->send($admin_email, $subject, $email_body, $headers);
+
                 $message = $message_success;
                 $status == true;
             }

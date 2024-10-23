@@ -34,7 +34,7 @@ $sub_partnering_hotels = ($lan === 'french') ? get_field('sub_partnering_hotels_
 $list_event = get_post_meta($event_id, 'hotel_type-of-rooms', true);
 $hotels = array();
 $data_hotel = get_post_meta($event_id, 'data_hotel_event', true);
-
+$featured_event = get_the_post_thumbnail_url($event_id,'full');
 if ($list_event) {
     foreach ($list_event as $event) {
         $hotels[] = $event['hotelId'];
@@ -353,3 +353,19 @@ if(!empty($locations)){
     <?php
 }
 ?>
+<style>
+    .price-tag.event1:before {
+        position: absolute;
+        content: "";
+        height: 40px;
+        width: 40px;
+        top: -18px;
+        left: 10px;
+        background-image: url(<?php echo $featured_event; ?>);
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: 9;
+    }
+</style>

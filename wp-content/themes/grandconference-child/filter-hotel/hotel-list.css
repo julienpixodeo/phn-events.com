@@ -492,19 +492,38 @@ body #stars-select {
 #list-hotel-map > div:nth-child(2){
     display: none !important;
 }
-#list-hotel-map .slick-dots li button:before,
-.price-tag.event:after {
+#list-hotel-map .slick-dots li button:before{
     content:none !important;
 }
 .price-tag.event {
     pointer-events: none !important;
-    background: rgb(255 45 85 / 50%);
+    background: transparent;
     width: 50px;
     height: 50px;
     border-radius: 100% !important;
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
+}
+.price-tag.event:after {
+    position: absolute;
+    content: "\f3c5";
+    height: auto;
+    width: auto;
+    -webkit-transition: .4s;
+    transition: .4s;
+    font-family: Font Awesome\ 5 Free;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff2d55;
+    font-size: 80px;
+    transform: none;
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+    top: 0;
+    left: 0;
 }
 @media (max-width:991px){
     .list-hotels-event {

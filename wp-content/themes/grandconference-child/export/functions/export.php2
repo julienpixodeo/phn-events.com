@@ -126,7 +126,6 @@ function export_ticket_list() {
 
         $headers = array(
             'Date de commande',
-            'Statut',
             'Numéro de commande',
             'Genre',
             'Prénom',
@@ -151,11 +150,6 @@ function export_ticket_list() {
         if (!empty($order_data)) {
             foreach ($order_data as $order) {
                 $woocommerce_events_order_tickets = get_woocommerce_events_order_tickets($order->ID);
-                if($order->i_status == 'Refund'){
-                    $status = 'Annulée';
-                }else{
-                    $status = 'Validée';
-                }
                 if(!empty($woocommerce_events_order_tickets)){
                     foreach ( $woocommerce_events_order_tickets as $event ){
                         if(isset($event['tickets']) && !empty($event['tickets'])){
@@ -182,7 +176,6 @@ function export_ticket_list() {
                                 }
                                 $row = array(
                                     $order->date_created_gmt,
-                                    $status,
                                     $order->ID,
                                     $order->gender,
                                     $order->first_name,
@@ -235,13 +228,12 @@ function get_order_data(){
                 om_card.meta_value AS card_number,
                 om_means.meta_value AS means_of_payment,
                 om_gender.meta_value AS gender,
-                mt.meta_value AS invoice_number,
-                it_status.meta_value AS i_status
+                mt.meta_value AS invoice_number
             FROM 
                 {$wpdb->prefix}wc_orders o
             LEFT JOIN 
                 {$wpdb->prefix}wc_order_addresses d ON o.ID = d.order_id AND d.address_type = 'billing'
-             LEFT JOIN 
+            LEFT JOIN 
                 {$wpdb->prefix}wc_order_stats st ON o.ID = st.order_id
             LEFT JOIN 
                 {$wpdb->prefix}wc_order_product_lookup lk ON o.ID = lk.order_id
@@ -253,8 +245,6 @@ function get_order_data(){
                 {$wpdb->prefix}wc_orders_meta om_gender ON o.ID = om_gender.order_id AND om_gender.meta_key = '_billing_genre'
             LEFT JOIN 
                 {$wpdb->prefix}postmeta mt ON o.ID = mt.post_id AND mt.meta_key = 'invoice_number'
-            LEFT JOIN 
-                {$wpdb->prefix}woocommerce_order_itemmeta it_status ON it_status.order_item_id = lk.order_item_id AND it_status.meta_key = 'Status'
             WHERE 
                 o.type = 'shop_order'
                 AND o.status = 'wc-completed'
@@ -340,7 +330,6 @@ function export_rooming_list() {
         
         $headers = array(
             'Date de commande',
-            'Statut',
             'Numéro de commande',
             'Nom de l\'hôtel',
             'Type de chambre',
@@ -370,13 +359,9 @@ function export_rooming_list() {
                             if ($start_day_ts == $end_day_ts) {
                                 $start = $end = $date;
                             } else {
-                                $array_date = explode(" au ", $date);
-                                if(isset($array_date[0])){
-                                    $start = $array_date[0];
-                                }
-                                if(isset($array_date[1])){
-                                    $end = $array_date[1]; 
-                                }                      
+                                $array_date = explode(" to ", $date);
+                                $start = $array_date[0];
+                                $end = $array_date[1];
                             }
                         } else {
                             $start = $end = '';
@@ -390,12 +375,6 @@ function export_rooming_list() {
                             }
                         } else {
                             $night = '';
-                        }
-
-                        if($order->i_status == 'Refund'){
-                            $status = 'Annulée';
-                        }else{
-                            $status = 'Validée';
                         }
 
                         $result = information_each_room($order_id,$rooms_id);
@@ -431,7 +410,6 @@ function export_rooming_list() {
                                 }
                                 $row = array(
                                     $date_created_gmt,
-                                    $status,
                                     $order_id,
                                     $title_hotel,
                                     $title_room,
@@ -466,7 +444,6 @@ function get_order_data_export_room(){
                 lk.variation_id,
                 it_start.meta_value AS start_day_ts,
                 it_end.meta_value AS end_day_ts,
-                it_status.meta_value AS i_status,
                 it_date.meta_value AS t_date
             FROM 
                 {$wpdb->prefix}wc_orders o
@@ -476,8 +453,6 @@ function get_order_data_export_room(){
                 {$wpdb->prefix}woocommerce_order_itemmeta it_start ON it_start.order_item_id = lk.order_item_id AND it_start.meta_key = 'start_day_ts'
             LEFT JOIN 
                 {$wpdb->prefix}woocommerce_order_itemmeta it_end ON it_end.order_item_id = lk.order_item_id AND it_end.meta_key = 'end_day_ts'
-                LEFT JOIN 
-                {$wpdb->prefix}woocommerce_order_itemmeta it_status ON it_status.order_item_id = lk.order_item_id AND it_status.meta_key = 'Status'
             LEFT JOIN 
                 {$wpdb->prefix}woocommerce_order_itemmeta it_date ON it_date.order_item_id = lk.order_item_id AND it_date.meta_key = 'Date'
             WHERE 
