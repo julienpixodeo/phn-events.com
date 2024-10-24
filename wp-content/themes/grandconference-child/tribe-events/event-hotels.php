@@ -35,6 +35,7 @@ $list_event = get_post_meta($event_id, 'hotel_type-of-rooms', true);
 $hotels = array();
 $data_hotel = get_post_meta($event_id, 'data_hotel_event', true);
 $featured_event = get_the_post_thumbnail_url($event_id,'full');
+
 if ($list_event) {
     foreach ($list_event as $event) {
         $hotels[] = $event['hotelId'];
@@ -354,7 +355,7 @@ if(!empty($locations)){
 }
 ?>
 <style>
-    .price-tag.event1:before {
+    .price-tag.event:before {
         position: absolute;
         content: "";
         height: 40px;

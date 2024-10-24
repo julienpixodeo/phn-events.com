@@ -123,11 +123,62 @@ if (!empty($address)) {
     <?php if (get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option('showComments', false)) comments_template() ?>
 <?php endwhile; ?>
 <?php 
-// echo footer_elementor();
-// get_footer(); s
+$featured_event = get_the_post_thumbnail_url($event_id,'full');
 ?>
+<style>
+    .price-tag.event:before {
+        position: absolute;
+        content: "";
+        height: 40px;
+        width: 40px;
+        top: -18px;
+        left: 10px;
+        background-image: url(<?php echo $featured_event; ?>);
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: 9;
+    }
+</style>
 <script>
     jQuery(document).ready(function ($) {
+        function CustomMarker(latlng, map) {
+            this.latlng = latlng;
+            this.map = map;
+            this.div = null;
+            this.setMap(map);
+        }
+
+        CustomMarker.prototype = new google.maps.OverlayView();
+
+        CustomMarker.prototype.onAdd = function () {
+            var div = document.createElement('div');
+            div.className = 'price-tag event';
+            this.div = div;
+
+            var panes = this.getPanes();
+            panes.overlayImage.appendChild(div);
+        };
+
+        CustomMarker.prototype.draw = function () {
+            var overlayProjection = this.getProjection();
+            var position = overlayProjection.fromLatLngToDivPixel(this.latlng);
+
+            var div = this.div;
+            if (div) {
+                div.style.left = position.x + 'px';
+                div.style.top = position.y + 'px';
+            }
+        };
+
+        CustomMarker.prototype.onRemove = function () {
+            if (this.div) {
+                this.div.parentNode.removeChild(this.div);
+                this.div = null;
+            }
+        };
+
         function initMap() {
             var myLatLng = { lat: <?php echo $address['lat']; ?>, lng: <?php echo $address['lng']; ?> };
             var map = new google.maps.Map(document.getElementById('map-details'), {
@@ -135,19 +186,10 @@ if (!empty($address)) {
                 disableDefaultUI: true,
                 center: myLatLng
             });
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                icon: {
-                    path: google.maps.SymbolPath.CIRCLE,
-                    fillColor: '#ff2d55',
-                    fillOpacity: 0.5,
-                    scale: 50,
-                    strokeColor: 'transparent',
-                    strokeWeight: 0,
-                },
-            });
+
+            var marker = new CustomMarker(myLatLng, map);
         }
+
         initMap();
     });
 </script>
